@@ -1,10 +1,12 @@
-A = [1 1 0;
-    1 1 0;
-    1 1 2];
+regularMatrix = pascal(4);
+
+[x, U] = gauss_elim(regularMatrix, [1; 1; 1; 1]);
+
+x_alternative = regularMatrix \ [1; 1; 1; 1];
+[~, U_alternative] = lu(regularMatrix);
 
 
-temp = A(1, :);
-temp(end + 1) = 5;
+
 
 
 
