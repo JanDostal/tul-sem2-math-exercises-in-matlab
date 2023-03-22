@@ -1,8 +1,28 @@
 function [x, U] = gauss_elim(A, b)
-    
-    if (size(b, 2) ~= 1)
+   
+    if size(A, 1) <= 1 || size(A, 2) <= 1
+        
+        error('input A not matrix');
+    end
+
+    if (size(b, 1) <= 1 && size(b, 2) <= 1) || (size(b, 1) > 1 && size(b, 2) > 1)
+        
+        error('input b not vector');
+    end
+
+    if size(b, 2) ~= 1
         
         b = b.';
+    end
+
+    if size(A, 1) ~= size(A, 2)
+        
+        error("input A not square matrix");
+    end
+
+    if length(b) ~= size(A, 1)
+
+        error("input b not same length as matrix");
     end
     
     numberOfRows = size(A, 1);
@@ -75,6 +95,11 @@ function [x, U] = gauss_elim(A, b)
                 + b(rowLevel);
         end
     end
+    
+    x = zeros(numberOfRows, 1);
 
-    x = A \ b;
+    for i = 1:numberOfRows
+        
+        x(i) = b(i) / A(i, i);
+    end
 end
