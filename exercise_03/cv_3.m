@@ -15,7 +15,6 @@ loglog(0:it_jacobi_poisson, rv_jacobi_poisson, "r");
 title("Konvergenční průběh iteračních metod pro poisson matici");
 
 hold on;
-
 loglog(0:it_pcg_poisson, rv_pcg_poisson, "g");
 loglog(0:it_seidel_poisson, rv_seidel_poisson, "b");
 
@@ -43,7 +42,8 @@ loglog(0:it_pcg_lehmer, rv_pcg_lehmer, "g");
 title("Konvergenční průběh iteračních metod pro lehmerovu matici");
 
 hold on;
-%loglog(0:it_jacobi_lehmer, rv_jacobi_lehmer, "r");
+%loglog(0:it_jacobi_lehmer, rv_jacobi_lehmer, "r"); % nekonvergující metoda pro danou
+%matici
 loglog(0:it_seidel_lehmer, rv_seidel_lehmer, "b");
 
 legend('pcg metoda', 'gauss-seidlova metoda');
@@ -69,27 +69,13 @@ loglog(0:it_jacobi_dorr, rv_jacobi_dorr, "r");
 title("Konvergenční průběh iteračních metod pro dorrovu matici");
 
 hold on;
-
-%semilogy(0:it_pcg_dorr, rv_pcg_dorr, "g");
-
+%loglog(0:it_pcg_dorr, rv_pcg_dorr, "g"); % nekonvergující metoda pro danou
+%matici
 loglog(0:it_seidel_dorr, rv_seidel_dorr, "b");
 
 legend('jacobi metoda', 'gauss-seidlova metoda');
 xlabel("počet iterací");
 ylabel("vektor reziduí");
 
-
-saveas(figure1, "graph_poisson.png");
-saveas(figure2, "graph_lehmer.png");
-saveas(figure3, "graph_dorr.png");
-
-
-% Pro graf lehmerovy matice nebyla zahrnuta jacobiho metoda, protoze
-% vratila flag 4, tedy relativni rezidium je prilis velke nebo male, tedy
-% nekonverguje
-
-%Pro graf dorrovy matice nebyla zahrnuta pcg metoda, protoze v 
-% v pripade pcg vracen flag 4, tedy nekonverguje, v pripade jacobiho vracen
-% pri maxit 1000 flag 1, pri navyseni z 1000 na 10000 misto flag 1 vracen
-% flag 0
-
+%V kodu jsou zakomentovane ty radky, kde by dochazelo k vykreslovani
+%nekonvergujich metod pro dane matice
