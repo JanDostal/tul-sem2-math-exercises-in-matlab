@@ -37,26 +37,23 @@ function [vec, lambda] = mocninna_metoda(A, y0, tol, maxit)
 
     if isempty(maxit) || size(maxit, 1) > 1 || size(maxit, 2) > 1 || maxit <= 0
         
-        maxit = 1000;
+        maxit = 100000;
     end
-    
-    normalizedY0 = y0 / norm(y0);
-    y0_temp = normalizedY0;
+
+    y0 = y0/norm(y0);
 
     for i = 1:maxit
+        y = A*y0;
+        lambda = y0'*y;
+        y = y/norm(y);
 
-        y0 = A * normalizedY0;
-        maxElement = max(abs(y0));
-        normalizedY0 = y0 / maxElement;
-
-        if norm(normalizedY0 - y0_temp) < tol
-
+        if norm(y0 - y) < tol
             break;
         end
 
-        y0_temp = normalizedY0;
+        y0 = y;
     end
 
-    vec = normalizedY0;
-    lambda = maxElement;
+    vec = y0;
+
 end
