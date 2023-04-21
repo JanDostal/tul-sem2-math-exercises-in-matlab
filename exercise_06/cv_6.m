@@ -17,6 +17,7 @@ y0_lagrange = lagrange(dataset0(:, 1), dataset0(:, 2), xq_0);
 plot(xq_0, y0_linear, "g");
 title("Data 0");
 
+
 hold on;
 
 plot(xq_0, y0_spline, "c");
