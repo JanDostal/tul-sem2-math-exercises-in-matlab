@@ -1,1 +1,1 @@
-# tul-sem2-math-projects-in-matlab
+# tul-sem2-math-exercises-in-matlab
