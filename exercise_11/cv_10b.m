@@ -38,7 +38,7 @@ F_handle = matlabFunction(F, 'Vars', {x_sym});
 
 J_handle = matlabFunction(J, 'Vars', {x_sym});
 
-% 4. najit hledanou moji polohu pomoci newton_raphson
+% 5. najit hledanou moji polohu pomoci newton_raphson
 
 [x, k] = newton_raphson(F_handle, J_handle, ...
     [0; 0; 0], 1e-3, 300);
