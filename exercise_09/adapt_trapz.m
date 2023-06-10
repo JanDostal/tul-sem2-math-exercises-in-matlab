@@ -48,7 +48,7 @@ function [I,k] = adapt_trapz(f,a,b,maxlevel,tol)
     I = 0;
     currentLevel = 0;
    
-    while (currentLevel <= maxlevel)
+    while (currentLevel < maxlevel)
         
         subIntervalWidth = (b - a) / (2^currentLevel);
 
