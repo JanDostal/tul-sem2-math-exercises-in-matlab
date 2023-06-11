@@ -1,13 +1,12 @@
 % 1. krok urcit. function handle (parametr f ve funkcich) 
 % pro diferencialni rovnici (v(t))
 
-m = 70; % hmotnost kg
+m_jezdec = 70; % hmotnost jezdce v kg
 P = 20; % hnaci sila N
 k = 0.516; % parametr odporove sily v N*m^-2*s^2
 
-m_kola = 15; % hmotnost kg
-m = m + m_kola + m_kola; % celkova hmotnost jezdce i kola, 
-% protoze bicykl ma dve kola
+m_kola = 15; % hmotnost bicyklu v kg
+m = m_jezdec + m_kola; % celkova hmotnost jezdce i kola
 
 dif_rovnice = @(t, v) (P - k .* v.^2) ./ m;
 
@@ -110,16 +109,16 @@ v_end_ode_km = 3.6 * v_end_ode_m;
 v_end_exp_km = 3.6 * v_end_exp_m;
 v_end_imp_km = 3.6 * v_end_imp_m;
 
-fprintf('Ustálená rychlost ode45: %.2f km/h\n', v_end_ode_km);
-fprintf('Čas dosažení ustálené rychlosti ode45: %.2f s\n', t_end_ode);
+fprintf('Ustálená rychlost ode45: %.3f km/h\n', v_end_ode_km);
+fprintf('Čas dosažení ustálené rychlosti ode45: %.3f s\n', t_end_ode);
 fprintf('Index casu ustalene rychlosti ode45: %d \n', i_end_ode);
 
-fprintf('Ustálená rychlost implicitni euler: %.2f km/h\n', v_end_imp_km);
-fprintf('Čas dosažení ustálené rychlosti implicitni euler: %.2f s\n', t_end_imp);
+fprintf('Ustálená rychlost implicitni euler: %.3f km/h\n', v_end_imp_km);
+fprintf('Čas dosažení ustálené rychlosti implicitni euler: %.3f s\n', t_end_imp);
 fprintf('Index casu ustalene rychlosti implicitni euler: %d \n', i_end_imp);
 
-fprintf('Ustálená rychlost explicitni euler: %.2f km/h\n', v_end_exp_km);
-fprintf('Čas dosažení ustálené rychlosti explicitni euler: %.2f s\n', t_end_exp);
+fprintf('Ustálená rychlost explicitni euler: %.3f km/h\n', v_end_exp_km);
+fprintf('Čas dosažení ustálené rychlosti explicitni euler: %.3f s\n', t_end_exp);
 fprintf('Index casu ustalene rychlosti explicitni euler: %d \n', i_end_exp);
 
 
