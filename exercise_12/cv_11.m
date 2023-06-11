@@ -146,4 +146,4 @@ ylabel('Rychlost (km/h)');
 legend("explicitni funkce", "implicitni funkce", "ode45", "ustalena rychlost");
 title("Graf prubehu rychlosti cyklisty");
 
-saveas(fig, "graph.png")
+saveas(fig, "graph.png");
