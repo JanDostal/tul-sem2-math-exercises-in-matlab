@@ -1,9 +1,9 @@
-## Popis
+## Description
 
-- Jedná se o jednotlivá cvičení, která jsem postupně samostatně vypracovával v rámci předmětu týkajícího se různých matematických záležitostí jako gaussova eliminační metoda, iterační metody, interpolace, lineární regrese atd. na Technické univerzitě v Liberci
-- Cvičení tvoří MATLAB skripty, takže pro spuštění je potřeba nainstalovat MATLAB
-- Cvičení se odevzdávala na Code Critic, který je poskytován TUL
+- These are individual exercises that I have been working on independently in the university course concerning various mathematical issues such as Gaussian elimination method, iterative methods, interpolation, linear regression etc. at the Technical University in Liberec
+- The exercises consist of MATLAB scripts, so to run them MATLAB needs to be installed
+- The exercises were submitted to Code Critic, which is provided by TUL
 
-## Informace o vypracovávání
+## Info about work process regarding exercises
 
-- Cvičení byla nahrávána postupně do tohoto repozitáře z Code Criticu
+- Exercises were uploaded sequentially to this repository from Code Critic
