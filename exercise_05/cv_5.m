@@ -1,3 +1,6 @@
+clear;
+close all;
+
 roots1 = roots([1 -4 2 2 1 6]);
 [x1, M1] = find_int_roots([1 -4 2 2 1 6]);
 

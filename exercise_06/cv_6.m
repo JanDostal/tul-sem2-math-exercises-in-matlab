@@ -1,3 +1,6 @@
+clear;
+close all;
+
 dataset0 = load("data0.mat", '-ascii');
 dataset1 = load("data1.mat", '-ascii');
 dataset2 = load("data2.mat", '-ascii');

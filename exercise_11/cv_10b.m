@@ -1,3 +1,6 @@
+clear;
+close all;
+
 % metoda pro vypocet vzdalenosti 3D bodu
 
 d = @(a, b) sqrt((a(1) - b(1))^2 + (a(2) - b(2))^2 + (a(3) - b(3))^2);

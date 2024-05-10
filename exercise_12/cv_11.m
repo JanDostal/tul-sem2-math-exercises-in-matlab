@@ -1,3 +1,6 @@
+clear;
+close all;
+
 % 1. krok urcit. function handle (parametr f ve funkcich) 
 % pro diferencialni rovnici (v(t))
 

@@ -1,3 +1,6 @@
+clear;
+close all;
+
 syms x_sym;
 
 a = 16;

@@ -1,4 +1,5 @@
-clear all;
+clear;
+close all;
 
 mytime = datetime;
 minutes = mytime.Hour * 60 + mytime.Minute + mytime.Second / 60;

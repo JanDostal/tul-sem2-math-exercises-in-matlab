@@ -1,3 +1,6 @@
+clear;
+close all;
+
 data = load("velocity.mat", '-ascii');
 
 speed = data(2, :);

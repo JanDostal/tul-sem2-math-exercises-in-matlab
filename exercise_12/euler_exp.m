@@ -1,6 +1,6 @@
 function [t,y] = euler_exp(f,a,b,y0,h)
     
-     if (size(a, 1) ~= 1 || size(a, 2) ~= 1)
+    if (size(a, 1) ~= 1 || size(a, 2) ~= 1)
         
         error("input a not number");
     end

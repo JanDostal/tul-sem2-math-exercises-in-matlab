@@ -1,3 +1,6 @@
+clear;
+close all;
+
 syms x;
 
 

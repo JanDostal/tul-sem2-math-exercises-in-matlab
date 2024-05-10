@@ -1,3 +1,6 @@
+clear;
+close all;
+
 figure1 = figure(1);
 
 A = full(gallery('poisson',5));

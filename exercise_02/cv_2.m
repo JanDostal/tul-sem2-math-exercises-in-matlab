@@ -1,3 +1,6 @@
+clear;
+close all;
+
 regularMatrix = pascal(4);
 
 [x, U] = gauss_elim(regularMatrix, [1; 1; 1; 1]);

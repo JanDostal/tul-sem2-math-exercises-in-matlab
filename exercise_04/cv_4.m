@@ -1,3 +1,6 @@
+clear;
+close all;
+
 testMatrix1 = [1 1 0; 1 1 1; 0 1 1];
 testMatrix2 = [1.5 -6.5 6.5; 1 -6 6.5; 1 -1 1.5];
 
